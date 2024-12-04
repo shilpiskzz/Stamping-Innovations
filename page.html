@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bfa5;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #00bfa5, #009688);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 2.5s ease-in;
+        }
+
+        .hero a {
+            padding: 0.75rem 2rem;
+            background: white;
+            color: #00bfa5;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+
+        .hero a:hover {
+            background: #e0f7fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin: 4rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill {
+            background: #e0f7fa;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33% - 1rem);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #004d40;
+            color: white;
+        }
+
+        footer a {
+            color: #00bfa5;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <h1>Shilpi's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <div class="hero">
+        <h1>Welcome to Stamping Innovations</h1>
+        <p>Crafting solutions that impact lives through innovation and creativity.</p>
+        <a href="#about">Learn More</a>
+    </div>
+
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome! I'm Shilpi, a second-year B.Tech Computer Science student with a passion for technology and a
+                vision to empower others, especially women in STEM. I focus on creating projects that solve real-world
+                problems with an artistic touch.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Parenting Wise</h3>
+                    <p>A user-friendly platform supporting parents with curated resources.</p>
+                </div>
+                <div class="project">
+                    <h3>Sustainable Fashion</h3>
+                    <p>An initiative for promoting eco-friendly clothing and sustainable practices.</p>
+                </div>
+                <div class="project">
+                    <h3>Plant Disease Detection</h3>
+                    <p>An AI-based solution using aerial imagery for smart agriculture.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">Machine Learning</div>
+                <div class="skill">Deep Learning</div>
+                <div class="skill">Web Development</div>
+                <div class="skill">Data Structures</div>
+                <div class="skill">Computer Vision</div>
+                <div class="skill">Open Source Contribution</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to discuss projects or collaboration opportunities!</p>
+            <p>Email: <a href="mailto:shilpi@example.com">shilpi@example.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/shilpi" target="_blank">linkedin.com/in/shilpi</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Shilpi. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
