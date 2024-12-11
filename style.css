@@ -1,0 +1,76 @@
+/* Reset the margin and padding to avoid default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the full viewport height for the body */
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* The background animation */
+body {
+    background: linear-gradient(45deg, #000000, #020518, #000000);
+    background-size: 400% 400%;
+    animation: gradientBackground 20s ease infinite;
+}
+
+/* Keyframes for the smooth color transition */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Content styling */
+.hero {
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
