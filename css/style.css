@@ -122,7 +122,7 @@ section {
 
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -193,13 +193,13 @@ section {
     height: 500px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(139, 224, 240, 0.5);
+    box-shadow: 0px 10px 15px rgba(139, 224, 240, 0.5);
 }
 
-.about-image:hover {
+/* .about-image:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgb(242, 249, 251, 0.25);
-}
+} */
 
 .education-item,
 .certificate-item {
