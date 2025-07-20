@@ -203,6 +203,8 @@ const Portfolio = () => {
           <p className="text-gray-600">© {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</p>
         </div>
       </footer>
+
+
     </div>
   );
 };

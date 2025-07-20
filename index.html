@@ -26,7 +26,7 @@
         <p class="brand-statement">Stamping solutions that impact lives through innovation and creativity.</p>
     </div>
 
-    <section id="about">
+    <section id="about" class="reveal">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-column">
@@ -73,37 +73,37 @@
     <section id="work">
         <h2 class="section-title">Featured Work</h2>
         <div class="work-grid">
-            <div class="work-item">
+            <div class="work-item reveal">
                 <img src="images/imd.png" alt="Project 1">
                 <h3> Meteorological Incident Mapping</h3>
                 <p>Built an interactive GIS web app to display real-time weather and environmental incidents across
                     India.</p>
             </div>
-            <div class="work-item">
+            <div class="work-item reveal">
                 <img src="images/mamaB.png" alt="Project 2">
                 <h3>Mama Bloom</h3>
                 <p>An AI-powered postpartum care assistant dedicated to empowering and supporting mothers through every
                     stage of motherhood with love and care.</p>
             </div>
-            <div class="work-item">
+            <div class="work-item reveal">
                 <img src="images/AthleteEdge.png" alt="Project 3">
                 <h3>AthleteEdge </h3>
                 <p>Developed an AI platform for athlete performance tracking, CV-based injury prediction, and ML-driven
                     training plans.</p>
             </div>
-            <div class="work-item">
+            <div class="work-item reveal">
                 <img src="images/image.png" alt="Project 4">
                 <h3>National Philatelic Commuinty</h3>
                 <p>Developed a Centralised website for Philatelists,providing access to materials across 26 postal
                     circles.</p>
             </div>
-            <div class="work-item">
+            <div class="work-item reveal">
                 <img src="images/welly.png" alt="Project 5">
                 <h3>Welly</h3>
                 <p> Built a personalized mobile app that sends hydration reminders to friends and family through daily
                     notifications.</p>
             </div>
-            <div class="work-item">
+            <div class="work-item reveal">
                 <img src="images/pdd.png" alt="Project 6">
                 <h3>Smart Agricultural Monitoring </h3>
                 <p>An AI-based Plant Disease Detection solution using aerial imagery for smart agriculture.</p>
@@ -114,24 +114,24 @@
     <section id="services">
         <h2 class="section-title">Skills</h2>
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card reveal">
                 <h3>Programming Languages</h3>
                 <p>C++</p>
                 <p>Python</p>
                 <p>Java</p>
             </div>
-            <div class="service-card">
+            <div class="service-card reveal">
                 <h3>Technical Skills</h3>
                 <p>Data Structures & Algorithms</p>
                 <p>Machine Learning </p>
                 <P>UI/UX</P>
             </div>
 
-            <div class="service-card">
+            <div class="service-card reveal">
                 <h3>Development</h3>
                 <p>Web Development</p>
             </div>
-            <div class="service-card">
+            <div class="service-card reveal">
                 <h3>Soft Skills</h3>
                 <p>Public Speaking</p>
                 <p>Leadership</p>
@@ -186,6 +186,24 @@
     </footer>
 
     <script src="new.js"></script>
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+
+
 
 </body>
 
